@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>Predictions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body  class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('prediction.home_page') }}">Welcome</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="fw-bold nav-link active" aria-current="page" href="{{ url_for('prediction.home_page') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="border-bottom mb-4"></div>
+                                <span class="nav-link active">INFO</span>
+                                <p>
+                                    This web application was created for educational purposes and is based on a data science project
+                                    to make predictions with a Machine Learning model developed in Scikit Learn.
+                                </p>
+                                <div class="border-bottom mb-4"></div>
+                                <p class="text-danger fw-bold">
+                                    Important!
+                                </p>
+                                <p>
+                                    This is not a medical web application. The information generated is merely informative and you should not use it
+                                    to obtain a diagnosis about your health.
+                                </p>
+                                <p>
+                                    We recommend consulting with your doctor for a professional diagnosis.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main class="mt-5 py-5 text-white">
+        <center>
+            <h2>Diabetes Prediction</h2>
+            <br>
+            {% block content_top %}
+            {% endblock content_top %}
+        </center>
+            
+        {% block content %}
+        {% endblock content %}	
+    </main>
+    <footer class="footer mt-auto py-3 border-top border-secondary">
+        <!-- place footer here -->
+        <div class="container text-center">
+            <span class="text-white">Developed by MN</span>
+        </div>
+  
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

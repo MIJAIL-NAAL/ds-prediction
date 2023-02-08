@@ -1,0 +1,13 @@
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/static/misael-moreno-Rl9bIWKCVF0-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+}
+
+
+@media screen and (max-width:640px){
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/static/thisisengineering-raeng-bcqDxjddPGk-unsplash.jpg');
+    }
+}
